@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "activity": "Parking Ticketing System",
+      "category": "Payment system",
+      "stage": "completed",
+      "id": 1
+    },
+    {
+      "activity": "Tasks Manager",
+      "category": "Time & Tasks Management",
+      "stage": "Pending",
+      "id": 2
+    },
+    {
+      "activity": "Amazon Clone ",
+      "category": "Ecomerce",
+      "stage": "Pending",
+      "id": 3
+    },
+    {
+      "activity": "Poker Game",
+      "category": "Gaming",
+      "stage": "Pending",
+      "id": 4
+    },
+    {
+      "activity": "Amazon WebScrapper",
+      "category": "web srapper",
+      "stage": "Pending",
+      "id": 5
+    },
+    {
+      "activity": "Router Parameters: id",
+      "category": "coding",
+      "id": 6
+    }
+  ]
+}

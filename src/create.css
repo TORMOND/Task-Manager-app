@@ -1,0 +1,46 @@
+/* FORM */
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+    width:50vw;
+    padding: 10px 16px;
+  }
+  .btn button{
+    cursor: pointer;
+  }
+ .create input{
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color:crimson;
+    color: #fff;
+    border: none;
+  }
+  select{
+    width: 320px;
+    padding: 10px;
+    margin: 0 auto;
+    outline:none;
+  }
+form  label{
+    display: inline-flex;
+  }
+  .submit{
+  border: none;
+  background-color:crimson;
+  color:#fff;
+  padding: 10px 30px;
+  cursor: pointer;
+  }
+.submit-disabled{
+    border: none;
+    background-color: rgb(189, 79, 101);
+    color:#fff;
+    padding: 10px 30px;
+    cursor: pointer;
+ }
+.create{
+  display: flex;
+}
