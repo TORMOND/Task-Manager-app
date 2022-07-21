@@ -4,7 +4,7 @@ import useFetch from './useFetch';
 import {Link} from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical, faFilter, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 // import {faYoutube} from '@fortawesome/free-brand-svg-icons';
 
 const Todos = () => {
@@ -34,10 +34,15 @@ const Todos = () => {
                     />
                     <div className="filter">
                         <span>Filter</span>
+                        <FontAwesomeIcon icon={ faFilter} ></FontAwesomeIcon>
                     </div>
                 </div>
                 <div className="projects">
-                  <h4>Ongoing Projects</h4>
+                    <div className="heading">
+                      <h4>Ongoing Projects</h4>
+                      <FontAwesomeIcon icon={faAngleDown} ></FontAwesomeIcon>
+                    </div>
+                 
 <div className="container">
 
                     {isPending && <div>Loading ...</div>}

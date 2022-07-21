@@ -8,8 +8,7 @@ const Home = () => {
 
             <div className="Home">
                 <NavBar HomePage="homepage" />
-        <Todos />
-               
+                <Todos /> 
             </div>
             
         </template>

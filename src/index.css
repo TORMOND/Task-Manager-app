@@ -110,11 +110,19 @@ color: #fff;
   grid-template-columns: repeat(2,1fr);
   gap: 20px;
 }
-
+.heading{
+  display: flex;
+  gap:10px;
+  align-items:center;
+}
 .filter{
+  display: flex;
+  gap:10px;
   background-color: rgb(39, 2, 10);
   padding: 5px 24px;
+  cursor:pointer;
   border-radius: 32px;
+  align-items:center;
 }
 
 .project-details{
@@ -149,16 +157,51 @@ color: #fff;
   list-style: none;
   display: inline-flex;
   padding: 10px;
-  color: crimson;
+  
   font-weight: 600;
+  cursor: pointer;
+}
+.sideBar-list li{
+  display: flex;
+  gap:10px;
+  align-items: center;
+  
+}
+.sideBar-list li:hover{
+  color: crimson;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.5s;
+}
+.Dashboard:hover{
+  color: crimson;
+}
+.Dashboard, .calender:hover{
+  color: crimson;
+}
+.Dashboard, .calender{
+ 
+  text-decoration: none;
+  display: flex;
+  gap:10px;
+  align-items: center;
 }
 .create-tab{
-  background-color: crimson;
+  background-color: rgb(228, 88, 116);
   text-decoration: none;
+  color: #fff;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  cursor: pointer;
 }
-.calender, .Dashboard{
+.calender, .Dashboard, .settings, .logout{
   text-decoration: none;
   display: inline-flex;
+  color:black;
+  display: flex;
+  gap: 10px;
 }
 .create-tab li{
    color:#fff;
@@ -193,3 +236,9 @@ color: #fff;
 
 /* SCHEDULE */
 
+.calender-section{
+  background-color: #dedee2;
+  width: 50vw;
+  height: 100vh;
+  border-radius: 5px;
+}

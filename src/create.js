@@ -1,11 +1,19 @@
 import { useState } from 'react';
 import './create.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
-const Create = () => {
+
+const Create = ({closeSection}) => {
     const [activity, setActivity] = useState('')
     const [category, setCategory] = useState('coding')
     const [pending, setisPending] = useState(false)
 
+    const [projectTitles] = useState([
+      {value: "Task-Manager",title:"Task Manager"},
+      {value:"Parking-Payment-System", title: "Parking Payment System"},
+      {value:"Ecommerce store",title: "Amazon clone"}
+    ])
     const handleSubmit = (e) =>{
         e.preventDefault();
         
@@ -28,6 +36,11 @@ const Create = () => {
     return ( 
         <template>
             <div className="create">
+
+              <div className="create-top-section">
+<FontAwesomeIcon icon={ faTimes } className='close-section' onClick={closeSection}></FontAwesomeIcon>
+              </div>
+
             <form onSubmit={handleSubmit}>
   <label >Project Title:</label>
   <input
@@ -37,23 +50,19 @@ const Create = () => {
    value={activity}
    onChange={(e)=> setActivity(e.target.value)}
    />
-   {/* <p>{activity}</p> */}
-   
+ 
    <label>Categories:</label>
-   <select 
-    value={category}
-    onChange={(e)=> setCategory(e.target.value)}
-    >
-      
-       <option value="Coding">Coding</option>
-       <option value="Workouts">Workouts</option>
-       <option value="Art">Arts</option>
-       <option value="Reading">Reading</option>
-       <option value="Hobby">Hobby</option>
-
-   </select>
    
-   {/* <p>{category}</p> */}
+       <select 
+         value={category}
+         onChange={(e)=> setCategory(e.target.value)}
+       >     
+      {projectTitles && projectTitles.map((projectTitle)=>(
+        <option value={projectTitle.value}>{projectTitle.title}</option>
+      ))}
+
+      </select>  
+   
    <div className="btn">
     {!pending &&<button className='submit'>Add Todo</button>}
     {pending &&<button className='submit-disabled' disabled>Sending</button>}
