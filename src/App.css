@@ -1,31 +1,14 @@
 .App {
-  
-}
-#app-container{
   text-align: center;
   height: 100vh;
   color: black;
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
 }
-#app-container.active{
- user-select: none;
- pointer-events: none;
- opacity: 0.10;
-}
+
 template{
   display: block;
 }
 
-.create-projects{
-  position: absolute;
-  z-index: 1;
-  background-color: #fff;
-  top:15%;
-  left: 25%;
-  border-radius: 5px;
-}
+
 .btns{
   display: flex;
   gap: 10px;

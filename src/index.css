@@ -45,7 +45,8 @@ font-weight: 600;
   display: flex;
   background-color: crimson;
   color: #fff;
-  width: 50vw;
+  width: 70vw;
+  margin: auto;
   flex-direction: column;
   border-radius: 8px;
   padding: 16px;
@@ -140,9 +141,12 @@ color: #fff;
 /* SIDE-BAR */
 
 .side-bar{
-  padding: 24px 16px;
+  padding: 20px 16px;
   height: 100vh;
-  position: fixed;
+  /* position: fixed;
+  z-index: 1; */
+  position: sticky;
+  top: 0;
   width: 19vw;
   box-shadow:  rgba(255, 255, 255, 0.5) 3px 3px 6px 1px inset, rgb(204, 219, 232) -3px -3px 6px 0px inset;
 }
@@ -240,5 +244,33 @@ color: #fff;
   background-color: #dedee2;
   width: 50vw;
   height: 100vh;
+  border-radius: 5px;
+}
+
+
+
+#app-container{
+  text-align: center;
+  height: 100vh;
+  color: black;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+#app-container.active{
+ user-select: none;
+ pointer-events: none;
+ opacity: 0.10;
+}
+.section-two-main{
+  display: flex;
+  grid-column: 2 / 3;
+}
+.create-projects{
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  top:15%;
+  left: 25%;
   border-radius: 5px;
 }
