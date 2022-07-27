@@ -1,0 +1,97 @@
+/* SIGNUP PAGE */
+.signupPage{
+    height: 100vh;
+    display: flex;
+      background: url(/public/dark-forest.jpg)no-repeat center;
+      background-size: cover;
+}
+
+/* LOGIN PAGE */
+.loginPage{
+    background: url(/public/dark-forest.jpg)no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    margin: auto;
+    padding: 10px ;
+}
+.signup-section{
+    background-color: crimson;
+    height:calc(100% - 10%);
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content:flex-start;
+     align-items:center ; 
+}
+.nameInputs  input{
+    outline-color: crimson;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border:0.25px solid #ceced1;
+}
+.loginPage input{
+    width: 250px;
+    outline-color: crimson;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border:0.25px solid #ceced1;
+}
+.input-credentials input{
+    outline-color: crimson;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border:0.25px solid #ceced1;
+}
+.nameInputs{
+display:flex;
+gap: 10px;
+justify-content:center;
+}
+.input-credentials{
+    display: flex;
+    gap: 10px;
+    justify-content:center;
+}
+.submit-credentials{
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 32px;
+    background-color: crimson;
+    width: 180px;
+    color: #fff;
+}
+.signup-form{
+    background-color: #fff;
+    margin:0 auto;
+
+    border-radius: 5px;
+}
+.user-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.user-login span{
+    color: blue;
+    cursor: pointer;
+}
+form{
+    display: inline-flex;
+    margin: auto;
+   width: inherit;
+   /* background-color: #fff; */
+}
+
+.btn{
+    width:inherit;
+}
+
+@media mobile {
+    form{
+        width: 80%;
+    }
+}
