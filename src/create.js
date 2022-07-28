@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import './create.css';
+//Scoped styles
+import styles from './create.module.css';
+//Font awesome fonts
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
@@ -31,14 +33,24 @@ const Create = ({closeSection}) => {
         setisPending(false)
       
       })
+      // setDoc(doc(db, "created-project", id, "comments", user.uid), { 
+      //   postedAt:serverTimestamp(),
+      //    userRemarks:this.comments,
+      //    user:user.uid,
+      //    userEmail:user.email,
+      //    userName: this.name + this.secondName,
+      //    comments:r.comments,
+      //    userUrl:this.profilePic,
+      //          });
+      
       }
       
     return ( 
         <template>
-            <div className="create">
+            <div className={styles.create}>
 
-              <div className="create-top-section">
-<FontAwesomeIcon icon={ faTimes } className='close-section' onClick={closeSection}></FontAwesomeIcon>
+              <div className={styles.createTopSection}>
+<FontAwesomeIcon icon={ faTimes } className={styles.closeSection} onClick={closeSection}></FontAwesomeIcon>
               </div>
 
             <form onSubmit={handleSubmit}>
@@ -63,9 +75,9 @@ const Create = ({closeSection}) => {
 
       </select>  
    
-   <div className="btn">
-    {!pending &&<button className='submit'>Add Todo</button>}
-    {pending &&<button className='submit-disabled' disabled>Sending</button>}
+   <div className={styles.btn}>
+    {!pending &&<button className={styles.submit}>Add Todo</button>}
+    {pending &&<button className={styles.submitDisabled} disabled>Sending</button>}
     
    </div>
    

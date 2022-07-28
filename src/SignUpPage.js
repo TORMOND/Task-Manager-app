@@ -2,6 +2,7 @@ import './formPages.css'
 import { useState } from "react";
 import LoginPage from './LoginPage';
 import { db, setDoc, doc, auth, createUserWithEmailAndPassword } from './firebase';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpPage = () => {
     const[email, setEmail] = useState('');
@@ -11,9 +12,12 @@ const SignUpPage = () => {
     const [signup, setSignUp] = useState(true);
     const [login, setLogin] = useState(null)
 
+    const navigate = useNavigate()
    const handleLogin = ()=> {
-    setLogin(true)
-    setSignUp(false)
+    // setLogin(true)
+    // setSignUp(false)
+
+    navigate('/LoginPage')
 
    }
    const handleSignUp = ()=> {
@@ -34,6 +38,7 @@ const SignUpPage = () => {
             secondName:secondName,
             id:user.uid
         })
+        navigate('/LoginPage')
        })
 
     }

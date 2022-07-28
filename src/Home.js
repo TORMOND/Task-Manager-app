@@ -5,8 +5,11 @@ import SideBar from './SideBar';
 // import Portfolio from './portfolio';
 import { useState, useRef } from 'react';
 import Create from './create';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate()
+
     const [project,setProjects] = useState(null);
     const appRef = useRef()
     const createProject = ()=>{
@@ -19,6 +22,9 @@ const Home = () => {
       setProjects(false)
       appRef.current.className = ''
     }
+    const logOut =()=>{
+      navigate('/LoginPage')
+    }
     return ( 
         <template>
 
@@ -28,7 +34,7 @@ const Home = () => {
                </div>
                   
                 <div ref={appRef}  id="app-container">
-<SideBar createProject={createProject}></SideBar>  
+<SideBar createProject={createProject}  logOut={logOut}></SideBar>  
             <div className="section-two-main">      
              <div>
                <NavBar HomePage="homepage" />

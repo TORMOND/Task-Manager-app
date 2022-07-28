@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays, faArrowRightFromBracket, faGear, faMagnifyingGlassChart, faHouse, faCirclePlus} from '@fortawesome/free-solid-svg-icons';
 
 
-const SideBar = ({createProject}) => {
+const SideBar = ({createProject, logOut}) => {
+
     
     return ( 
         <template>
@@ -38,7 +39,7 @@ const SideBar = ({createProject}) => {
             <FontAwesomeIcon icon={ faGear}></FontAwesomeIcon>
             <p>Settings</p>
                 </li>
-            <li className='Logout'>
+            <li className='Logout' onClick={logOut}>
             <FontAwesomeIcon icon={ faArrowRightFromBracket} ></FontAwesomeIcon>
             <p>Logout</p>
                 </li>

@@ -17,6 +17,9 @@ template{
 .homepage{
   color: crimson;
 }
+.Home{
+  margin-bottom: 20px;
+}
 
 /* NAVBAR */
 
@@ -181,7 +184,6 @@ color: #fff;
   color: crimson;
 }
 .Dashboard, .calender{
- 
   text-decoration: none;
   display: flex;
   gap:10px;

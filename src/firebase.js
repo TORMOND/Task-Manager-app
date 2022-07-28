@@ -26,7 +26,6 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-
 const user = auth.currentUser;
 
 export {
